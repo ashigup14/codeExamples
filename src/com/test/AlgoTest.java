@@ -20,6 +20,8 @@ public class AlgoTest {
 	    // computeStatus() is called even if "status" is not empty
 	    // return status.orElse(computeStatus()); 
 	    return status.orElseGet(this::computeStatus); 
+	    
+	    //return status.orElseThrow(IllegalStateException::new);
 	}
 
 }

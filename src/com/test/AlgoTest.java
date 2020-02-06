@@ -19,6 +19,7 @@ public class AlgoTest {
 	    Optional<String> status = Optional.of("Result"); // prone to return an empty Optional
 	    // computeStatus() is called even if "status" is not empty
 	    // return status.orElse(computeStatus()); 
+	    
 	    return status.orElseGet(this::computeStatus); 
 	}
 

@@ -7,15 +7,29 @@ package com.test.annotation;
  * @author ashish
  *
  */
-@MyAnnotation(name = "Ashish", count = 10)
+@CustomTypeAnnotation(
+		priority = CustomTypeAnnotation.Priority.HIGH,
+		createdBy = "Nupur",
+		tags = {"java" , "annotations"}
+		)
 public class AnnotationExample {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	@CustomMethodAnnotation
+	void shouldAlwaysBeProcessed()
+	{
+		System.out.println("This should always be processed!!");
+	}
+	
+	@CustomMethodAnnotation
+	void willThrowException()
+	{
+		throw new RuntimeException("This will throw exception!!");
+	}
+	
+	@CustomMethodAnnotation
+	void shouldNotBeProcessed()
+	{
+		throw new RuntimeException("This should never be processed!!");
 	}
 
 }

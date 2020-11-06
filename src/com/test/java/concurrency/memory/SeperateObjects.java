@@ -19,7 +19,7 @@ public class SeperateObjects {
 		Runnable runnable2 = new MyRunnable(myObject);
 		
 		Thread t1 = new Thread(runnable1, "Thread 1");
-		Thread t2 = new Thread(runnable2, "Thread 2");
+		Thread t2 = new Thread(runnable1, "Thread 2");
 		//Myobject is different even when we are using same MyRunnable object
 		//Thread t2 = new Thread(runnable1, "Thread 2");
 		

@@ -9,7 +9,7 @@ package com.test.java.concurrency.memory;
  */
 public class MyRunnable implements Runnable {
 
-	private int count = 0;
+	private volatile int count = 0;
 	
 	private MyObject myObject = null;
 	
@@ -27,13 +27,18 @@ public class MyRunnable implements Runnable {
 		
 	//	MyObject myObject = new MyObject();
 		System.out.println(myObject);
-		for(int i=0; i<100; i++)
+		synchronized(this) 
 		{
-			this.count++;
-		}
+			for(int i=0; i<1000000; i++)
+			{
+				this.count++;
+			}
+		
 		
 		System.out.println(
 				Thread.currentThread().getName() + " : " + this.count);
+		
+		}
 	}
 
 }

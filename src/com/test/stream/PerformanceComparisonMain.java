@@ -13,7 +13,7 @@ public class PerformanceComparisonMain {
             data.add(i);
         }
  
-        long sum=data.stream()
+        long sum=data.stream().parallel()
                 .map(i ->(int)Math.sqrt(i))
                 .map(number->performComputation(number))
                 .reduce(0,Integer::sum);

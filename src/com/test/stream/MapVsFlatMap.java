@@ -41,9 +41,13 @@ public class MapVsFlatMap {
 		Integer maxNumber = findingMax.isPresent()?findingMax.get():0;
 		System.out.println(maxNumber);
 		
-		List<String> chars =  Arrays.asList("a","s","h","i","j");
+		List<String> chars =  Arrays.asList("ashi","nupsi","dhaani","krishna","ganesh");
 		String stringsAdded = chars.stream().reduce("", (a,b) -> a+b);
 		System.out.println(stringsAdded);
+		
+		Optional<String> longWord = chars.stream().reduce((w1, w2) -> w1.length()>w2.length()?w1:w2);
+		String longestString = longWord.isPresent()?longWord.get():"this will never come";
+		System.out.println(longestString);
 	}
 
 }

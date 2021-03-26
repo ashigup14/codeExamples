@@ -14,14 +14,14 @@ public class Customer {
 	private int id;
 	private String name;
 	private String email;
-	private List<String> phoneNmuners;
+	private List<String> phoneNumbers;
 	
-	public Customer(int id, String name, String email, List<String> phoneNmuners) {
+	public Customer(int id, String name, String email, List<String> phoneNumbers) {
 	//	super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.phoneNmuners = phoneNmuners;
+		this.phoneNumbers = phoneNumbers;
 	}
 
 	public int getId() {
@@ -46,14 +46,15 @@ public class Customer {
 
 	public void setEmail(String email) {
 		this.email = email;
+		
 	}
 
-	public List<String> getPhoneNmuners() {
-		return phoneNmuners;
+	public List<String> getPhoneNumbers() {
+		return phoneNumbers;
 	}
 
-	public void setPhoneNmuners(List<String> phoneNmuners) {
-		this.phoneNmuners = phoneNmuners;
+	public void setPhoneNumbers(List<String> phoneNumbers) {
+		this.phoneNumbers = phoneNumbers;
 	}
 
 	/**

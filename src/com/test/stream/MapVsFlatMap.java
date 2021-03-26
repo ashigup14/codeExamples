@@ -28,6 +28,11 @@ public class MapVsFlatMap {
 		List<Customer> customers = EkartDataBase.getAll();
 		List<String> emailIds = customers.stream().map(customer -> customer.getEmail()).collect(Collectors.toList());
 		System.out.println(emailIds);
+		
+		List<String> phoneNumbers = customers.stream()
+											 .flatMap(cus -> cus.getPhoneNumbers().stream())
+											 .collect(Collectors.toList());
+		System.out.println(phoneNumbers);
 	}
 
 }

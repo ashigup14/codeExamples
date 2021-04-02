@@ -1,6 +1,6 @@
 package com.test.lrucache;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LRUCache {
@@ -13,7 +13,8 @@ public class LRUCache {
 	
 	
 	public LRUCache(int capacity) {
-		node_map = new HashMap<Integer, Node>(capacity);
+		node_map = new LinkedHashMap<>(capacity);
+	
 		cache_capacity = capacity;
 		head.setNext(tail);
 		tail.setPrev(head);

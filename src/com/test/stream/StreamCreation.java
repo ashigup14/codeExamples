@@ -8,6 +8,7 @@ public class StreamCreation {
 		Stream<Integer> intStream=Stream.generate(() -> 1).limit(5);
 		intStream.forEach(System.out::println);
 		
+		System.out.println(intStream.findAny());
 
 	}
 

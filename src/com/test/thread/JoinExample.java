@@ -27,6 +27,9 @@ public class JoinExample {
 		};
 		
 		t.start();
+		
+		// can't set this value
+		//b =  false;
 		// TODO Auto-generated method stub
 		Thread.sleep(1000);
 		

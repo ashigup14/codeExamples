@@ -17,6 +17,11 @@ class DelphixAnagramFinder {
  //   List<String> wordsList = readWords(WORD_LIST_PATH);
 	  
 	  List<String> wordsList =Arrays.asList("cat", "tac", "act", "test", "sett","ttes", "te'st", "TE'ST");
+	  
+	  List<String> unmodifiableList = Collections.unmodifiableList(wordsList);
+	  unmodifiableList.set(1, "ashish");
+	  
+//	  wordsList.add("anddd");
     System.out.println(wordsList);
     Map<String, List<String>> returnedSource  = createSource(wordsList);
     

@@ -15,6 +15,7 @@ public class LongAdderExample {
 		LongAdder counter = new LongAdder();
 		ExecutorService executorService = Executors.newFixedThreadPool(8);
 
+		//@sun.misc.Contended("tlr")
 		int numberOfThreads = 4;
 		int numberOfIncrements = 100;
 

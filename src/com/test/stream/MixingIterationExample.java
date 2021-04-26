@@ -26,6 +26,8 @@ public class MixingIterationExample {
 		 *  the best way is to 
 		 *  
 		 *  
+		 *  No side effects
+		 *  
 		 *  Map<Month, Map<Integer, Long>> results = data.Stream()
 		 *  											 .map(DataType::getDate)
 		 *  										     .collect(groupingBy(ZonedDateTime::getMonth,

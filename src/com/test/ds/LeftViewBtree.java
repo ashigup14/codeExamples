@@ -8,7 +8,7 @@ public class LeftViewBtree {
 
 	int maxLevel = 0;
 	
-	void leftview(Node root,int level,  List<Integer> result)
+	void leftview(Node1 root,int level,  List<Integer> result)
 	{
 		if(root == null)
 			return;
@@ -23,7 +23,7 @@ public class LeftViewBtree {
 		leftview(root.right, level+1, result);
 	}
 	
-	void rightView(Node root,int level,  List<Integer> result)
+	void rightView(Node1 root,int level,  List<Integer> result)
 	{
 		if(root == null)
 			return;
@@ -41,10 +41,10 @@ public class LeftViewBtree {
 	public static void main(String args[])
 	{
 		
-		Node root = new Node(1);
-		root.left = new Node(2);
-		root.right = new Node(3);
-		root.right.right = new Node(6);
+		Node1 root = new Node1(1);
+		root.left = new Node1(2);
+		root.right = new Node1(3);
+		root.right.right = new Node1(6);
 		
 		List<Integer> result = new ArrayList<>();
 		LeftViewBtree lftView = new LeftViewBtree();
@@ -55,11 +55,11 @@ public class LeftViewBtree {
 
 }
 
-class Node{
+class Node1{
 	int data;
-	Node left, right;
+	Node1 left, right;
 	
-	Node(int data)
+	Node1(int data)
 	{
 		this.data = data;
 		this.right = null;

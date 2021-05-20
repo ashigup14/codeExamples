@@ -40,7 +40,7 @@ public class FindHighFrequency {
 			Map<String, String> custRecords = new HashMap<>();
 			Map<String, Integer> frequency = new HashMap<>();
 
-			// logfill
+			// iterate over record or log file once ----> O(n) 
 			for (LogRecord record : logRecords) {
 				// checking if the custRecords contains the customer data
 				String page_id = record.getPage_id();

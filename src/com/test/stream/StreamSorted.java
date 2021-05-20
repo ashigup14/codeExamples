@@ -22,6 +22,14 @@ public class StreamSorted {
         aList.stream()
         .sorted((p1, p2)->p1.y.compareTo(p2.y))
         .forEach(System.out::println);
+        
+        try{
+        	System.out.println("ashish");
+        	System.exit(0);
+        }
+        finally {
+			System.out.println("hello in finally");
+		}
     }
 }
 

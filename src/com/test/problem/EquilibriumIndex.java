@@ -34,7 +34,7 @@ class EquilibriumIndex {
          leftsum += arr[i];
      }
 
-     /* If no equilibrium index found, then return 0 */
+     /* If no equilibrium index found, then return empty list */
      return equilibriumIndexes;
  }
 

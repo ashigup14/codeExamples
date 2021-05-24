@@ -3,6 +3,9 @@ package com.test.stream.mapreduce;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class MapReduceTest {
 	
@@ -18,7 +21,9 @@ public class MapReduceTest {
 		
 		int sum = intList.stream().mapToInt(i -> i).sum();
 		
-		
+	
+		IntStream filter = IntStream.rangeClosed(4,10).filter(k -> k%2==0);
+		System.out.println(filter.boxed().collect(Collectors.toList()));
 		
 		
 		
